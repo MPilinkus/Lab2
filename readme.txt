@@ -1,0 +1,1 @@
+Šis projektas skirtas naudoti su intellij programavimo aplinka
