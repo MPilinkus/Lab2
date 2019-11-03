@@ -460,6 +460,40 @@ public class BstSet<E extends Comparable<E>> implements SortedSet<E>, Cloneable 
         return subset;
     }
 
+    public boolean containsAll(BstSet<E> c) {
+        if(c == null) {
+            throw new UnsupportedOperationException("Duotasis medis yra tuscias");
+        }
+        if(root == null) {
+            throw new UnsupportedOperationException("Medis yra tuscias");
+        }
+        boolean containsAll = true;
+        for(E element : c){
+            if(!this.contains(element)){
+                containsAll = false;
+            }
+        }
+        return containsAll;
+    }
+
+    public boolean removeAll(BstSet<E> c) {
+        if(c == null) {
+            throw new UnsupportedOperationException("Duotasis medis yra tuscias");
+        }
+        if(root == null) {
+            throw new UnsupportedOperationException("Medis yra tuscias");
+        }
+        boolean removeAll = true;
+        for(E element : c){
+            if(this.contains(element)){
+                this.remove(element);
+            } else {
+                removeAll = false;
+            }
+        }
+        return removeAll;
+    }
+
     /**
      * Grąžinamas tiesioginis iteratorius.
      *
