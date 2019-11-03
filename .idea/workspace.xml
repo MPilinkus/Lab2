@@ -1,21 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4ae599b0-ef34-4cb9-bbdf-4ae625eb52a1" name="Default Changelist" comment="" />
+    <list default="true" id="4ae599b0-ef34-4cb9-bbdf-4ae625eb52a1" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/edu/ktu/ds/lab2/pilinkus/House.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/edu/ktu/ds/lab2/pilinkus/ManualTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/edu/ktu/ds/lab2/utils/BstSet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/edu/ktu/ds/lab2/utils/BstSet.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1RmjT34hrUhrxyScj39sQAaAhDM" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="project.structure.last.edited" value="Global Libraries" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="File.Encoding" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Studijoms\OneDrive - Kaunas University of Technology\Duomenu_strukturos\Lab2_AibesMedziai_Intellij\src\edu\ktu\ds\lab2\pilinkus" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -29,13 +54,26 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Application.SimpleBenchmark">
+  <component name="RunManager" selected="Application.ManualTest (1)">
     <configuration name="DemoExecution" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="edu.ktu.ds.lab2.demo.DemoExecution" />
       <module name="Lab2_AibesMedziai" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="edu.ktu.ds.lab2.demo.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ManualTest (1)" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="edu.ktu.ds.lab2.pilinkus.ManualTest" />
+      <module name="Lab2_AibesMedziai" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="edu.ktu.ds.lab2.pilinkus.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
@@ -97,9 +135,10 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.ManualTest (1)" />
+        <item itemvalue="Application.DemoExecution" />
         <item itemvalue="Application.SimpleBenchmark" />
         <item itemvalue="Application.ManualTest" />
-        <item itemvalue="Application.DemoExecution" />
         <item itemvalue="Application.VykdymoModulis" />
       </list>
     </recent_temporary>
@@ -114,18 +153,25 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1570279170219</updated>
+      <workItem from="1572246866823" duration="4158000" />
+      <workItem from="1572770057704" duration="16705000" />
     </task>
     <servers />
   </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/edu/ktu/ds/lab2/demo/CarMarket.java</url>
-          <line>12</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="COLUMN_ORDER" />
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
