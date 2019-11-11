@@ -26,21 +26,26 @@ public class ManualTest {
         set.add(5);
 
         set2.add(1);
-        set2.add(12);
+        set2.add(11);
         set2.add(6);
-        Ks.oun("");
+        Ks.oun("1asis medis");
         Ks.oun(set.toVisualizedString(""));
-//        Ks.oun("");
-//        Ks.oun(set.subSet(11, false, 11, true).toVisualizedString(""));
+        Ks.oun("subSet(6, false, 3, true)");
+        Ks.oun(set.subSet(6, false, 3, true).toVisualizedString(""));
 //        Ks.oun("");
 //        Ks.oun(set.subSet(6, 11).toVisualizedString(""));
-//        Ks.oun("");
-//        Ks.oun(set.tailSet(6).toVisualizedString(""));
-//        Ks.oun("");
-//        Ks.oun(set.containsAll(set2));
+//        Ks.oun("headSet(6)");
+//        Ks.oun(set.headSet(6).toVisualizedString(""));
+//        Ks.oun("2asis medis");
+//        Ks.out(set2.toVisualizedString(""));
+//        Ks.oun(set.removeAll(set2));
+//        Ks.oun("1asis medis po removeAll");
+//        Ks.oun(set.toVisualizedString(""));
 //        Ks.oun("");
 //        Ks.oun(set.removeAll(set2));
 //        Ks.oun("");
 //        Ks.oun(set.toVisualizedString(""));
+        Ks.oun("");
+        Ks.oun(set.last());
     }
 }

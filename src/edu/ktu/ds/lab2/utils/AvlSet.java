@@ -74,11 +74,83 @@ public class AvlSet<E extends Comparable<E>> extends BstSet<E>
      */
     @Override
     public void remove(E element) {
-        throw new UnsupportedOperationException("Studentams reikia realizuoti remove(E element)");
+        removeRecursive(element, (AVLNode<E>) root);
     }
 
-    private AVLNode<E> removeRecursive(E element, AVLNode<E> n) {
-        throw new UnsupportedOperationException("Studentams reikia realizuoti removeRecursive(E element, AVLNode<E> n)");
+    private AVLNode<E> removeRecursive(E element, AVLNode<E> node) {
+        if (node == null)
+            return null;
+        int cmp = c.compare(element, node.element);
+        if (cmp < 0)
+            node.setLeft(removeRecursive(element, node.getLeft()));
+        else if (cmp > 0)
+            node.setRight(removeRecursive(element, node.getRight()));
+        else
+        {
+            if ((node.getLeft() == null) || (node.getRight() == null))
+            {
+                AVLNode<E> temp = null;
+                if (temp == node.getLeft())
+                    temp = node.getRight();
+                else
+                    temp = node.getLeft();
+                if (temp == null)
+                {
+                    temp = node;
+                    node = null;
+                }
+                else
+                    node = temp;
+            }
+            else
+            {
+                AVLNode<E> temp = minValueNode(node.getRight());
+                node.element = temp.element;
+                node.setRight(removeRecursive(temp.element, node.getRight()));
+            }
+        }
+        if (node == null)
+            return node;
+        node.height = max(height(node.getLeft()), height(node.getRight())) + 1;
+        int balance = getBalance(node);
+        if (balance > 1 && getBalance(node.getLeft()) >= 0)
+            return rightRotation(node);
+        if (balance > 1 && getBalance(node.getLeft()) < 0)
+        {
+            node.setLeft(leftRotation(node.getLeft()));
+            return rightRotation(node);
+        }
+        if (balance < -1 && getBalance(node.getRight()) <= 0)
+            return leftRotation(node);
+        if (balance < -1 && getBalance(node.getRight()) > 0)
+        {
+            node.setRight(rightRotation(node.getRight()));
+            return leftRotation(node);
+        }
+
+        return node;
+    }
+
+    AVLNode<E> minValueNode(AVLNode<E> node)
+    {
+        AVLNode<E> current = node;
+
+        /* loop down to find the leftmost leaf */
+        while (current.getLeft() != null)
+            current = current.getLeft();
+        return current;
+    }
+
+    int max(int a, int b)
+    {
+        return Math.max(a, b);
+    }
+
+    int getBalance(AVLNode<E> N)
+    {
+        if (N == null)
+            return 0;
+        return height(N.getLeft()) - height(N.getRight());
     }
 
     // Papildomi privatūs metodai, naudojami operacijų su aibe realizacijai

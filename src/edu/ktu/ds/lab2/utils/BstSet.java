@@ -229,6 +229,10 @@ public class BstSet<E extends Comparable<E>> implements SortedSet<E>, Cloneable 
         return parent;
     }
 
+    public E last(){
+        return get(root, true).element;
+    }
+
     /**
      * Grąžinamas aibės elementų masyvas.
      *
@@ -389,7 +393,6 @@ public class BstSet<E extends Comparable<E>> implements SortedSet<E>, Cloneable 
             throw new UnsupportedOperationException("1-asis elementas nerastas!");
         }
         boolean flagFound = false;
-        boolean flagTo = false;
         while (element1Branch != null) {
             int cmp = c.compare(element2, element1Branch.element);
             if (cmp < 0) {
@@ -492,6 +495,23 @@ public class BstSet<E extends Comparable<E>> implements SortedSet<E>, Cloneable 
             }
         }
         return removeAll;
+    }
+
+    public int height() {
+        return height(root);
+    }
+
+    // recursive height helper 1
+    protected int height(BstNode<E> node) {
+        return height(node, -1);
+    }
+
+    // recursive height helper 2
+    protected int height(BstNode<E> node, int h) {
+        if (node == null)
+            return h;
+        else
+            return Math.max(height(node.left, h+1), height(node.right, h+1));
     }
 
     /**

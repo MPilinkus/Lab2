@@ -3,6 +3,7 @@ package edu.ktu.ds.lab2.pilinkus;
 import edu.ktu.ds.lab2.utils.Ks;
 import edu.ktu.ds.lab2.utils.Parsable;
 
+import java.util.Comparator;
 import java.util.InputMismatchException;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
@@ -83,4 +84,43 @@ public class House implements Parsable<House> {
     public int compareTo(House otherHouse) {
         return getHouseRegNr().compareTo(otherHouse.getHouseRegNr());
     }
+
+    public static Comparator<House> byArea = (House h1, House h2) -> {
+        // didėjanti tvarka, pradedant nuo mažiausios
+        if (h1.area < h2.area) {
+            return -1;
+        }
+        if (h1.area > h2.area) {
+            return +1;
+        }
+        return 0;
+    };
+
+    public static Comparator<House> byPrice = (House h1, House h2) -> {
+        // didėjanti tvarka, pradedant nuo mažiausios
+        if (h1.price < h2.price) {
+            return -1;
+        }
+        if (h1.price > h2.price) {
+            return +1;
+        }
+        return 0;
+    };
+
+    public static Comparator<House> byYearPrice = (House h1, House h2) -> {
+        // metai mažėjančia tvarka, esant vienodiems lyginama kaina
+        if (h1.year > h2.year) {
+            return +1;
+        }
+        if (h1.year < h2.year) {
+            return -1;
+        }
+        if (h1.price > h2.price) {
+            return +1;
+        }
+        if (h1.price < h2.price) {
+            return -1;
+        }
+        return 0;
+    };
 }
